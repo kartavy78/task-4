@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    .nav {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+    }
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .nav li {
+      margin-right: 20px;
+    }
+    .content {
+      display: flex;
+      gap: 20px;
+    }
+    .column {
+      flex: 1;
+      background-color: #f2f2f2;
+      padding: 15px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ✅ Media Query for screens smaller than 768px */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .nav ul {
+        flex-direction: column;
+      }
+      .nav li {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="column">
+        <h2>Welcome</h2>
+        <p>This is a basic site layout.</p>
+      </div>
+      <div class="column">
+        <img src="https://via.placeholder.com/600" alt="Placeholder Image">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
